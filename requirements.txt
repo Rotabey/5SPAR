@@ -1,0 +1,10 @@
+psycopg2-binary
+kafka-python
+tweepy
+Mastodon.py
+confluent-kafka
+matplotlib
+pandas
+wordcloud
+textblob
+seaborn
