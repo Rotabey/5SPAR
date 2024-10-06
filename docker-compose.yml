@@ -1,0 +1,56 @@
+version: '3.8'  # Vous pouvez éventuellement retirer cette ligne pour éviter l'avertissement
+
+services:
+  postgres:
+    image: postgres:14
+    container_name: postgres
+    environment:
+      POSTGRES_USER: rotabey
+      POSTGRES_PASSWORD: rotabey
+      POSTGRES_DB: twitterdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    container_name: zookeeper
+    ports:
+      - "2181:2181"
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181  # Port client Zookeeper
+
+  kafka:
+    image: wurstmeister/kafka:latest
+    container_name: kafka
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  jupyter:
+    build: .
+    container_name: jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/home/jovyan/work
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+    depends_on:
+      - kafka
+      - postgres
+    command: >
+      start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''
+
+volumes:
+  postgres-data:
