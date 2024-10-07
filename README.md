@@ -20,6 +20,10 @@ Rôles des conteneurs :
 - Zookeeper : Coordonne les services Kafka et garantit leur disponibilité.
 - PostgreSQL : Base de données relationnelle utilisée pour stocker les données des publications Mastodon.
 
+Création d'un compte Mastodon et obtention de la clé API
+
+Pour récupérer des données depuis Mastodon, vous devez créer un compte et obtenir une clé API afin de pouvoir accéder à l'API Mastodon. Voici les étapes à suivre :
+
 ## Installation et exécution
 
 Cloner le dépôt :
@@ -47,3 +51,14 @@ Accéder à Jupyter Notebook :
 - WordCloud : Génération de nuages de mots à partir des hashtags.
 - PostgreSQL : Base de données pour le stockage des données Mastodon.
 - Kafka et Zookeeper : Gestion des flux de données en temps réel.
+
+## Créer un compte Mastodon :
+Rendez-vous sur un serveur Mastodon public (https://mastodon.social) aafin de vous créer un compte.
+
+Obtenir une clé API :
+- Une fois connecté à votre compte Mastodon, allez dans les Préférences/Paramètres de votre compte et allez dans la section Développement.
+- Créez une nouvelle application API. Mastodon fournira une clé d'accès (Access Token) que vous devrez utiliser pour interagir avec l'API.
+
+Ajouter la clé API à votre projet :
+- Ouvrez le fichier mastodon_to_kafka.py.
+- Ajoutez la clé API dans le fichier sous la variable access_token.
