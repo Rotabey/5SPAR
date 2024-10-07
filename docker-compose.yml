@@ -5,8 +5,8 @@ services:
     image: postgres:14
     container_name: postgres
     environment:
-      POSTGRES_USER: rotabey
-      POSTGRES_PASSWORD: rotabey
+      POSTGRES_USER:
+      POSTGRES_PASSWORD:
       POSTGRES_DB: mastodondb
     ports:
       - "5432:5432"
@@ -46,8 +46,8 @@ services:
       - ./notebooks:/home/jovyan/work
     environment:
       - DB_NAME=mastodondb
-      - DB_USER=rotabey
-      - DB_PASSWORD=rotabey
+      - DB_USER=
+      - DB_PASSWORD=
       - JUPYTER_ENABLE_LAB=yes
     depends_on:
       - kafka

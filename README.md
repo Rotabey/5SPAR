@@ -31,6 +31,8 @@ Cloner le dépôt :
 ```bash
 git clone https://github.com/Rotabey/5SPAR.git
 ```
+Modifier le fichier docker-compose.yml :
+- Renseigner les variables d'environnement pour PostgreSQL et Jupyter.
 
 Lancer les conteneurs Docker :
 
