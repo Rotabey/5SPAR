@@ -1,7 +1,7 @@
 # 5SPAR
 ## Analyse des Données de Mastodon
 
-Ce projet consiste en une analyse approfondie des données récupérées depuis la plateforme Mastodon, une alternative décentralisée à Twitter. L'objectif principal est d'explorer l'engagement des utilisateurs, la distribution des sentiments dans les publications, et d'extraire des insights pertinents à partir des hashtags utilisés.
+Ce projet consiste en une analyse approfondie des données récupérées depuis la plateforme Mastodon. L'objectif principal est d'explorer l'engagement des utilisateurs, la distribution des sentiments dans les publications, et d'extraire des insights pertinents à partir des hashtags utilisés.
 
 Le projet s'appuie sur des technologies de traitement de données distribuées (PySpark), de visualisation (Matplotlib, Seaborn), et de stockage (PostgreSQL). Pour garantir une infrastructure flexible et reproductible, Docker est utilisé pour orchestrer différents services tels que Jupyter Notebook, Kafka, Zookeeper, et PostgreSQL.
 Fonctionnalités principales :
