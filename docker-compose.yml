@@ -45,7 +45,10 @@ services:
     volumes:
       - ./notebooks:/home/jovyan/work
     environment:
-      JUPYTER_ENABLE_LAB: "yes"
+      - DB_NAME=mastodondb
+      - DB_USER=rotabey
+      - DB_PASSWORD=rotabey
+      - JUPYTER_ENABLE_LAB=yes
     depends_on:
       - kafka
       - postgres
