@@ -7,7 +7,7 @@ services:
     environment:
       POSTGRES_USER: rotabey
       POSTGRES_PASSWORD: rotabey
-      POSTGRES_DB: twitterdb
+      POSTGRES_DB: mastodondb
     ports:
       - "5432:5432"
     volumes:
