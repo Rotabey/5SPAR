@@ -48,6 +48,7 @@ services:
       - DB_NAME=mastodondb
       - DB_USER=
       - DB_PASSWORD=
+      - MASTODON_KEY=
       - JUPYTER_ENABLE_LAB=yes
     depends_on:
       - kafka
