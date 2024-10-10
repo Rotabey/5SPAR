@@ -6,7 +6,7 @@ Membres du groupe : Evelina Coquelet, Jean-Baptiste Cherrier
 
 Ce projet consiste en une analyse approfondie des données récupérées depuis la plateforme Mastodon. L'objectif principal est d'explorer l'engagement des utilisateurs, la distribution des sentiments dans les publications, et d'extraire des insights pertinents à partir des hashtags utilisés.
 
-Le projet s'appuie sur des technologies de traitement de données distribuées (PySpark), de visualisation (Matplotlib, Seaborn), et de stockage (PostgreSQL). Pour garantir une infrastructure flexible et reproductible, Docker est utilisé pour orchestrer différents services tels que Jupyter Notebook, Kafka, Zookeeper, et PostgreSQL.
+Le projet s'appuie sur des technologies de traitement de données distribuées (PySpark), de visualisation (Matplotlib, Seaborn, Squarify, WordCloud), et de stockage (PostgreSQL). Pour garantir une infrastructure flexible et reproductible, Docker est utilisé pour orchestrer différents services tels que Jupyter Notebook, Kafka, Zookeeper, et PostgreSQL.
 
 ### Principes de conception
 
@@ -34,7 +34,7 @@ Le médaillon se compose généralement de trois couches :
 
 - **Activité des utilisateurs** : Visualisation de l'activité des utilisateurs par date et heure, ce qui permet de déterminer les moments les plus actifs sur la plateforme. Cette analyse aide à comprendre le comportement des utilisateurs et à identifier les périodes d'engagement maximal.
 
-Ces fonctionnalités combinées fournissent une vue d'ensemble complète de l'activité sur Mastodon, permettant d'extraire des insights significatifs et d'orienter les décisions futures basées sur les données.
+Ces fonctionnalités combinées fournissent une vue d'ensemble complète de l'activité sur Mastodon, permettant d'extraire des insights significatifs.
 
 ## Technologies utilisées
 
