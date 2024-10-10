@@ -1,7 +1,5 @@
 # 5SPAR
 
-Membres du groupe : Evelina Coquelet, Jean-Baptiste Cherrier
-
 ## Analyse des données de Mastodon
 
 Ce projet consiste en une analyse approfondie des données récupérées depuis la plateforme Mastodon. L'objectif principal est d'explorer l'engagement des utilisateurs, la distribution des sentiments dans les publications, et d'extraire des insights pertinents à partir des hashtags utilisés.
